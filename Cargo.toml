@@ -1,0 +1,68 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/agent-core",
+    "crates/agent-provider",
+    "crates/agent-tools",
+    "crates/agent-mcp",
+    "crates/agent-session",
+    "crates/agent-memory",
+    "crates/agent-cli",
+    "crates/agent-tui",
+]
+
+[workspace.dependencies]
+# errors
+anyhow = "1"
+thiserror = "2"
+
+# async
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+futures = "0.3"
+async-trait = "0.1"
+
+# serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# http
+reqwest = { version = "0.12", features = ["json", "stream"] }
+
+# cli
+clap = { version = "4", features = ["derive"] }
+
+# filesystem
+walkdir = "2"
+ignore = "0.4"
+notify = "8"
+similar = "2"
+
+# git
+git2 = "0.20"
+
+# logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# tui
+ratatui = "0.29"
+crossterm = "0.28"
+
+# mcp
+rmcp = { version = "0.1", features = ["client", "transport-child-process", "transport-sse"] }
+
+# time
+chrono = { version = "0.4", features = ["serde"] }
+
+# id
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# workspace crates
+agent-core = { path = "crates/agent-core" }
+agent-provider = { path = "crates/agent-provider" }
+agent-tools = { path = "crates/agent-tools" }
+agent-mcp = { path = "crates/agent-mcp" }
+agent-session = { path = "crates/agent-session" }
+agent-memory = { path = "crates/agent-memory" }

@@ -1,0 +1,22 @@
+[package]
+name = "agent-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+agent-provider = { workspace = true }
+agent-tools = { workspace = true }
+agent-session = { workspace = true }
+agent-memory = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tokio-stream = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }

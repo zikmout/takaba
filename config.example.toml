@@ -1,0 +1,32 @@
+# agent-rs configuration
+# Copy this file to .agent/config.toml and adjust as needed.
+
+[provider]
+type = "ollama"
+base_url = "http://localhost:11434"
+model = "code-agent-14b"
+
+[agent]
+max_iterations = 5
+max_context_tokens = 12000
+max_files_per_iteration = 12
+max_file_size_kb = 200
+
+[git]
+auto_branch = true
+branch_prefix = "agent/"
+
+# MCP server configuration (optional)
+# [[mcp.servers]]
+# name = "figma"
+# enabled = true
+#
+# [mcp.servers.transport]
+# type = "stdio"
+# command = "npx"
+# args = ["-y", "figma-developer-mcp"]
+#
+# [mcp.servers.permissions]
+# allow_read = true
+# allow_write = false
+# require_confirmation_for_write = true

@@ -1,0 +1,15 @@
+[package]
+name = "agent-tui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+agent-core = { workspace = true }
+agent-provider = { workspace = true }
+agent-tools = { workspace = true }
+agent-session = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+ratatui = { workspace = true }
+crossterm = { workspace = true }
